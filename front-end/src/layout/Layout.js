@@ -18,15 +18,8 @@ function Layout() {
         <div className="col-lg-2 side-bar">
           <Menu />
         </div>
-        <div className="col" style={{ padding: "0px" }}>
-          <img
-            src="/images/restaurant-lighting-1.jpg"
-            class="img-fluid"
-            alt="Dashboard banner"
-          ></img>
-          <div style={{ padding: "15px" }}>
-            <Routes />
-          </div>
+        <div className="col" style={{ padding: "0px" }}>         
+          <Routes />         
         </div>
       </div>
     </div>
