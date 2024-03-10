@@ -29,13 +29,13 @@ function Routes() {
       <Route path="/search">
         <SearchReservation />
       </Route>
-      <Route path="/reservations/new">
+      <Route exact path="/reservations/new">
         <ReservationCreate />
       </Route>
-      <Route path="/reservations/:reservation_id/edit">
+      <Route exact path="/reservations/:reservation_id/edit">
         <EditReservation />
       </Route>
-      <Route path="/reservations/:reservation_id/seat">
+      <Route exact path="/reservations/:reservation_id/seat">
         <SeatReservationForm />
       </Route>
       <Route exact={true} path="/reservations">
