@@ -1,5 +1,6 @@
 import React from "react";
 import { setReservationStatus } from "../utils/api";
+import { Link } from "react-router-dom"
 
 function DashboardReservationsTableButtons({
   reservation,
@@ -9,13 +10,13 @@ function DashboardReservationsTableButtons({
   function SeatButton({ reservation_id, status }) {
     if (status === "booked") {
       return (
-        <a
+        <Link
           className="btn btn-primary btn-sm"
-          href={`/reservations/${reservation_id}/seat`}
+          to={`/reservations/${reservation_id}/seat`}
           role="button"
         >
           Seat
-        </a>
+        </Link>
       );
     }
     return null;
@@ -23,9 +24,9 @@ function DashboardReservationsTableButtons({
 
   function EditReservationButton({ reservation_id }) {
     return (
-      <a
+      <Link
         className="btn btn-secondary btn-sm col-md-8 mb-2"
-        href={`/reservations/${reservation_id}/edit`}
+        to={`/reservations/${reservation_id}/edit`}
         role="button"
       >
         <svg
@@ -43,7 +44,7 @@ function DashboardReservationsTableButtons({
           />
         </svg>
         Edit
-      </a>
+      </Link>
     );
   }
 
